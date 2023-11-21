@@ -1,2 +1,1 @@
-# JWT-101
- 
+# JWT-basics
