@@ -1,6 +1,6 @@
 class CustomErrorAPI extends Error {
   constructor (message, status) {
-    super(status)
+    super(message)
     this.status = status
   }
 }
