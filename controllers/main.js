@@ -1,11 +1,11 @@
-const CustomErrorAPI = require('../errors/custom-error')
+const { BadRequest } = require('../errors')
 const jwt = require('jsonwebtoken')
 
 const login = async (req, res) => {
   const { username, password } = req.body
 
   if (!username || !password) {
-    throw new CustomErrorAPI('Please provide email or password', 400)
+    throw new BadRequest('Please provide email or password')
   }
   const id = new Date().getDate()
   //Signing a JWT token with secrey key
